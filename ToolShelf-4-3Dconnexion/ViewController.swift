@@ -21,6 +21,9 @@ class ViewController: NSViewController {
     @IBOutlet var lblRotateZ: NSTextField!
     
     @IBOutlet var lblActiveBtns: NSTextField!
+	
+	@IBOutlet var WtfCurrentPref: NSTextFieldCell!
+	
     
     private var clientID : UInt16?
     
@@ -86,7 +89,7 @@ class ViewController: NSViewController {
         switch(msgType){
         case ConnexionClient.Msg.DeviceState:
 			
-			print("Inside ConnexionClient.msg.DeviceState")
+//			print("Inside ConnexionClient.msg.DeviceState")
 
             let state = (UnsafeMutablePointer<ConnexionDeviceState>(msgArgPtr)).memory
 				
@@ -125,10 +128,28 @@ class ViewController: NSViewController {
             
             break;
         case ConnexionClient.Msg.PrefsChanged:
-            print("Inside ConnexionClient.Msg.PrefsChanged")
-            
-            
-            
+			print("Inside ConnexionClient.Msg.PrefsChanged")
+			
+			var prefs = ConnexionDevicePrefs();
+			
+			ConnexionGetCurrentDevicePrefs(deviceID, &prefs)
+	
+			var deviceName = "Unknown"
+			
+			switch(prefs.deviceID){
+			case 32767:
+				deviceName = "SpaceNavigator"
+				break
+			default:
+				break
+			}
+			
+			let prefString : String = "\(deviceName) - deviceID: (\(prefs.deviceID))";
+			
+			ViewController.appInstance.mainVC.WtfCurrentPref.stringValue = prefString
+			
+			
+			
             break;
         case ConnexionClient.Msg.CalibrateDevice:
             print("Inside ConnexionClient.Msg.CalibrateDevice")

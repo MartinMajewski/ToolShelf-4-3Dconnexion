@@ -62,13 +62,11 @@
 		30337CC71BE7664C00220DC6 /* ToolShelf-4-3Dconnexion */ = {
 			isa = PBXGroup;
 			children = (
-				30337CE41BE7692700220DC6 /* ToolShelf-4-3Dconnexion.entitlements */,
+				303EB9831BE797B3009B6207 /* Ressources */,
 				30337CE01BE766C000220DC6 /* 3Dconnexion */,
 				30337CC81BE7664C00220DC6 /* AppDelegate.swift */,
 				30337CCA1BE7664C00220DC6 /* ViewController.swift */,
 				30337CCC1BE7664C00220DC6 /* Assets.xcassets */,
-				30337CCE1BE7664C00220DC6 /* Main.storyboard */,
-				30337CD11BE7664C00220DC6 /* Info.plist */,
 			);
 			path = "ToolShelf-4-3Dconnexion";
 			sourceTree = "<group>";
@@ -89,6 +87,16 @@
 				30337CDA1BE766B700220DC6 /* 3dconnexion-Bridging-Header.h */,
 			);
 			name = "Bridging Header";
+			sourceTree = "<group>";
+		};
+		303EB9831BE797B3009B6207 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				30337CD11BE7664C00220DC6 /* Info.plist */,
+				30337CCE1BE7664C00220DC6 /* Main.storyboard */,
+				30337CE41BE7692700220DC6 /* ToolShelf-4-3Dconnexion.entitlements */,
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +279,10 @@
 		30337CD51BE7664C00220DC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -289,8 +299,10 @@
 		30337CD61BE7664C00220DC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,6 +335,7 @@
 				30337CD61BE7664C00220DC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
