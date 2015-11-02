@@ -12,8 +12,6 @@
 		30337CCD1BE7664C00220DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30337CCC1BE7664C00220DC6 /* Assets.xcassets */; };
 		30337CD01BE7664C00220DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30337CCE1BE7664C00220DC6 /* Main.storyboard */; };
 		30337CDC1BE766B700220DC6 /* ConnexionAuxiliaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */; };
-		30337CDD1BE766B700220DC6 /* MyConnexionDeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD81BE766B700220DC6 /* MyConnexionDeviceState.swift */; };
-		30337CDE1BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD91BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift */; };
 		30337CDF1BE766B700220DC6 /* ConnexionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CDB1BE766B700220DC6 /* ConnexionClient.swift */; };
 		30337CE21BE766ED00220DC6 /* 3DconnexionClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */; };
 /* End PBXBuildFile section */
@@ -26,8 +24,6 @@
 		30337CCF1BE7664C00220DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30337CD11BE7664C00220DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionAuxiliaries.swift; sourceTree = "<group>"; };
-		30337CD81BE766B700220DC6 /* MyConnexionDeviceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConnexionDeviceState.swift; sourceTree = "<group>"; };
-		30337CD91BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConnexionDeviceStateTuple.swift; sourceTree = "<group>"; };
 		30337CDA1BE766B700220DC6 /* 3dconnexion-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "3dconnexion-Bridging-Header.h"; sourceTree = "<group>"; };
 		30337CDB1BE766B700220DC6 /* ConnexionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionClient.swift; sourceTree = "<group>"; };
 		30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = 3DconnexionClient.framework; path = ../../../../../../../Library/Frameworks/3DconnexionClient.framework; sourceTree = "<group>"; };
@@ -82,8 +78,6 @@
 			children = (
 				30337CE31BE7670200220DC6 /* Bridging Header */,
 				30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */,
-				30337CD81BE766B700220DC6 /* MyConnexionDeviceState.swift */,
-				30337CD91BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift */,
 				30337CDB1BE766B700220DC6 /* ConnexionClient.swift */,
 			);
 			name = 3Dconnexion;
@@ -174,11 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30337CDC1BE766B700220DC6 /* ConnexionAuxiliaries.swift in Sources */,
-				30337CDE1BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift in Sources */,
 				30337CDF1BE766B700220DC6 /* ConnexionClient.swift in Sources */,
 				30337CCB1BE7664C00220DC6 /* ViewController.swift in Sources */,
 				30337CC91BE7664C00220DC6 /* AppDelegate.swift in Sources */,
-				30337CDD1BE766B700220DC6 /* MyConnexionDeviceState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

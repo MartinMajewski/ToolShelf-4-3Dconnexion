@@ -85,12 +85,10 @@ class ViewController: NSViewController {
         
         switch(msgType){
         case ConnexionClient.Msg.DeviceState:
+			
+			print("Inside ConnexionClient.msg.DeviceState")
 
             let state = (UnsafeMutablePointer<ConnexionDeviceState>(msgArgPtr)).memory
-
-			let uint64Size = alignof(UInt64)
-			let uint32x2Size = alignof((UInt32, UInt32))
-			print("UInt64 \(uint64Size) - 2x UInt32 \(uint32x2Size)")
 				
             if state.client == clientID{
                 
@@ -127,13 +125,13 @@ class ViewController: NSViewController {
             
             break;
         case ConnexionClient.Msg.PrefsChanged:
-            print("Inside ConnexionClient.MsgPrefsChanged")
+            print("Inside ConnexionClient.Msg.PrefsChanged")
             
             
             
             break;
         case ConnexionClient.Msg.CalibrateDevice:
-            print("Inside ConnexionClient.MsgCalibrateDevice")
+            print("Inside ConnexionClient.Msg.CalibrateDevice")
             
             
             break;

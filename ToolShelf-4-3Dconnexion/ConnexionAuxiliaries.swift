@@ -10,36 +10,6 @@ import Foundation
 
 struct ConnexionAuxiliaries{
 	
-	static func GetStringFrom(DeviceState ds: MyConnexionDeviceStateTuple) -> String!{
-		return "--------------------------\n" +
-			"Version:\t\(ds.version)\n" +
-			"Client:\t\(ds.client)\n" +
-			"Command:\t\(ds.command)\n" +
-			"Param:\t\(ds.param)\n" +
-			"Value:\t\(ds.value)\n" +
-			"Time:\t\(ds.time)\n" +
-			"Report:\t\(ds.report)\n" +
-			"Buttons8:\t\(ds.buttons8)\n" +
-			"Axis:\t\(ds.axis)\n" +
-			"Address:\t\(ds.address)\n" +
-		"Buttons:\t\(ds.buttons)\n"
-	}
-	
-	static func GetStringFrom(DeviceState ds: MyConnexionDeviceState) -> String!{
-		return "--------------------------\n" +
-			"Version:\t\(ds.version)\n" +
-			"Client:\t\(ds.client)\n" +
-			"Command:\t\(ds.command)\n" +
-			"Param:\t\(ds.param)\n" +
-			"Value:\t\(ds.value)\n" +
-			"Time:\t\(ds.time)\n" +
-			"Report:\t\(ds.report[0])\n" +
-			"Buttons8:\t\(ds.buttons8)\n" +
-			"Axis:\t\(ds.axis)\n" +
-			"Address:\t\(ds.address)\n" +
-		"Buttons:\t\(ds.buttons)\n"
-	}
-	
 	static func GetStringFrom(DeviceState ds: ConnexionDeviceState) -> String!{
 		return "--------------------------\n" +
 			"Version:\t\(ds.version)\n" +
