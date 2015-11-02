@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30337CC91BE7664C00220DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CC81BE7664C00220DC6 /* AppDelegate.swift */; };
+		30337CCB1BE7664C00220DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CCA1BE7664C00220DC6 /* ViewController.swift */; };
+		30337CCD1BE7664C00220DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30337CCC1BE7664C00220DC6 /* Assets.xcassets */; };
+		30337CD01BE7664C00220DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30337CCE1BE7664C00220DC6 /* Main.storyboard */; };
+		30337CDC1BE766B700220DC6 /* ConnexionAuxiliaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */; };
+		30337CDD1BE766B700220DC6 /* MyConnexionDeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD81BE766B700220DC6 /* MyConnexionDeviceState.swift */; };
+		30337CDE1BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD91BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift */; };
+		30337CDF1BE766B700220DC6 /* ConnexionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CDB1BE766B700220DC6 /* ConnexionClient.swift */; };
+		30337CE21BE766ED00220DC6 /* 3DconnexionClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30337CC51BE7664C00220DC6 /* ToolShelf-4-3Dconnexion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToolShelf-4-3Dconnexion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30337CC81BE7664C00220DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30337CCA1BE7664C00220DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30337CCC1BE7664C00220DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30337CCF1BE7664C00220DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30337CD11BE7664C00220DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionAuxiliaries.swift; sourceTree = "<group>"; };
+		30337CD81BE766B700220DC6 /* MyConnexionDeviceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConnexionDeviceState.swift; sourceTree = "<group>"; };
+		30337CD91BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConnexionDeviceStateTuple.swift; sourceTree = "<group>"; };
+		30337CDA1BE766B700220DC6 /* 3dconnexion-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "3dconnexion-Bridging-Header.h"; sourceTree = "<group>"; };
+		30337CDB1BE766B700220DC6 /* ConnexionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionClient.swift; sourceTree = "<group>"; };
+		30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = 3DconnexionClient.framework; path = ../../../../../../../Library/Frameworks/3DconnexionClient.framework; sourceTree = "<group>"; };
+		30337CE41BE7692700220DC6 /* ToolShelf-4-3Dconnexion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ToolShelf-4-3Dconnexion.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30337CC21BE7664C00220DC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30337CE21BE766ED00220DC6 /* 3DconnexionClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30337CBC1BE7664C00220DC6 = {
+			isa = PBXGroup;
+			children = (
+				30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */,
+				30337CC71BE7664C00220DC6 /* ToolShelf-4-3Dconnexion */,
+				30337CC61BE7664C00220DC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30337CC61BE7664C00220DC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30337CC51BE7664C00220DC6 /* ToolShelf-4-3Dconnexion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30337CC71BE7664C00220DC6 /* ToolShelf-4-3Dconnexion */ = {
+			isa = PBXGroup;
+			children = (
+				30337CE41BE7692700220DC6 /* ToolShelf-4-3Dconnexion.entitlements */,
+				30337CE01BE766C000220DC6 /* 3Dconnexion */,
+				30337CC81BE7664C00220DC6 /* AppDelegate.swift */,
+				30337CCA1BE7664C00220DC6 /* ViewController.swift */,
+				30337CCC1BE7664C00220DC6 /* Assets.xcassets */,
+				30337CCE1BE7664C00220DC6 /* Main.storyboard */,
+				30337CD11BE7664C00220DC6 /* Info.plist */,
+			);
+			path = "ToolShelf-4-3Dconnexion";
+			sourceTree = "<group>";
+		};
+		30337CE01BE766C000220DC6 /* 3Dconnexion */ = {
+			isa = PBXGroup;
+			children = (
+				30337CE31BE7670200220DC6 /* Bridging Header */,
+				30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */,
+				30337CD81BE766B700220DC6 /* MyConnexionDeviceState.swift */,
+				30337CD91BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift */,
+				30337CDB1BE766B700220DC6 /* ConnexionClient.swift */,
+			);
+			name = 3Dconnexion;
+			sourceTree = "<group>";
+		};
+		30337CE31BE7670200220DC6 /* Bridging Header */ = {
+			isa = PBXGroup;
+			children = (
+				30337CDA1BE766B700220DC6 /* 3dconnexion-Bridging-Header.h */,
+			);
+			name = "Bridging Header";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30337CC41BE7664C00220DC6 /* ToolShelf-4-3Dconnexion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30337CD41BE7664C00220DC6 /* Build configuration list for PBXNativeTarget "ToolShelf-4-3Dconnexion" */;
+			buildPhases = (
+				30337CC11BE7664C00220DC6 /* Sources */,
+				30337CC21BE7664C00220DC6 /* Frameworks */,
+				30337CC31BE7664C00220DC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ToolShelf-4-3Dconnexion";
+			productName = "ToolShelf-4-3Dconnexion";
+			productReference = 30337CC51BE7664C00220DC6 /* ToolShelf-4-3Dconnexion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30337CBD1BE7664C00220DC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = MartinMajewski.net;
+				TargetAttributes = {
+					30337CC41BE7664C00220DC6 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = BMGKE42NFX;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 30337CC01BE7664C00220DC6 /* Build configuration list for PBXProject "ToolShelf-4-3Dconnexion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30337CBC1BE7664C00220DC6;
+			productRefGroup = 30337CC61BE7664C00220DC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30337CC41BE7664C00220DC6 /* ToolShelf-4-3Dconnexion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30337CC31BE7664C00220DC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30337CCD1BE7664C00220DC6 /* Assets.xcassets in Resources */,
+				30337CD01BE7664C00220DC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30337CC11BE7664C00220DC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30337CDC1BE766B700220DC6 /* ConnexionAuxiliaries.swift in Sources */,
+				30337CDE1BE766B700220DC6 /* MyConnexionDeviceStateTuple.swift in Sources */,
+				30337CDF1BE766B700220DC6 /* ConnexionClient.swift in Sources */,
+				30337CCB1BE7664C00220DC6 /* ViewController.swift in Sources */,
+				30337CC91BE7664C00220DC6 /* AppDelegate.swift in Sources */,
+				30337CDD1BE766B700220DC6 /* MyConnexionDeviceState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30337CCE1BE7664C00220DC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30337CCF1BE7664C00220DC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30337CD21BE7664C00220DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30337CD31BE7664C00220DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		30337CD51BE7664C00220DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "ToolShelf-4-3Dconnexion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.martinmajewski.ToolShelf-4-3Dconnexion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ToolShelf-4-3Dconnexion/3dconnexion-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		30337CD61BE7664C00220DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "ToolShelf-4-3Dconnexion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.martinmajewski.ToolShelf-4-3Dconnexion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ToolShelf-4-3Dconnexion/3dconnexion-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30337CC01BE7664C00220DC6 /* Build configuration list for PBXProject "ToolShelf-4-3Dconnexion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30337CD21BE7664C00220DC6 /* Debug */,
+				30337CD31BE7664C00220DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30337CD41BE7664C00220DC6 /* Build configuration list for PBXNativeTarget "ToolShelf-4-3Dconnexion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30337CD51BE7664C00220DC6 /* Debug */,
+				30337CD61BE7664C00220DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30337CBD1BE7664C00220DC6 /* Project object */;
+}
