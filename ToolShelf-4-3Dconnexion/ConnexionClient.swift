@@ -71,7 +71,8 @@ struct ConnexionClient{
         static let All        : UInt32 = 0x3FFF
         
         // Added in version 10:0 to support all 32 buttons on the SpacePilot Pro, use with the new SetConnexionClientButtonMask API
-        
+        // Although being a 64bit value 3Dconnexion uses a uint32_t type. Bug?
+		
         static let Button9      : UInt64 = 0x00000100
         static let Button10     : UInt64 = 0x00000200
         static let Button11     : UInt64 = 0x00000400
@@ -98,6 +99,8 @@ struct ConnexionClient{
         static let Button30     : UInt64 = 0x20000000
         static let Button31     : UInt64 = 0x40000000
         static let Button32     : UInt64 = 0x80000000
+		
+		// Have to cast this UInt64 value to UIn32... This is BAD!!!
         
         static let AllButtons   : UInt64 = 0xFFFFFFFF
     }

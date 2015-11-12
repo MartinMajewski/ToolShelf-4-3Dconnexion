@@ -9,7 +9,7 @@
 import Cocoa
 
 
-class ViewController: NSViewController {
+public class ViewController: NSViewController {
     static let appInstance = NSApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet var lblTranslateX: NSTextField!
@@ -27,19 +27,19 @@ class ViewController: NSViewController {
     
     private var clientID : UInt16?
     
-    var ClientID : UInt16 {
-        get{
-            if clientID == nil{
-                return 0;
-            }else{
-                return clientID!
-            }
-        }
-        set{
-            clientID! = newValue
-        }
-    }
-    
+//    var ClientID : UInt16 {
+//        get{
+//            if clientID == nil{
+//                return 0;
+//            }else{
+//                return clientID!
+//            }
+//        }
+//        set{
+//            clientID! = newValue
+//        }
+//    }
+	
     func start3DMouse() -> OSErr{
         
         if clientID == 0{
@@ -60,7 +60,8 @@ class ViewController: NSViewController {
                 return -1
             }
             
-            SetConnexionClientButtonMask(clientID!, kConnexionMaskAllButtons);
+            SetConnexionClientButtonMask(clientID!, (UInt32)(ConnexionClient.Mask.AllButtons));
+			SetConnexionClientMask(clientID!, ConnexionClient.Mask.All)
             print("ClientID: \(clientID!)")
             
         }else{
@@ -80,20 +81,24 @@ class ViewController: NSViewController {
     
     let myMessageHandler : ConnexionMessageHandlerProc = { (deviceID : UInt32, msgType : UInt32, var msgArgPtr : UnsafeMutablePointer<Void>) -> Void in
         
-        let clientID = ViewController.appInstance.mainVC?.ClientID
-        
-        if (clientID == nil) || clientID! == 0{
-            return
-        }
-        
+//        let clientID = ViewController.appInstance.mainVC?.ClientID
+//        
+//        if (clientID == nil) || clientID! == 0{
+//            return
+//        }
+		
+		let clientID = ViewController.appInstance.mainVC?.clientID
+		
+		if clientID == nil {
+			return
+		}
+		
         switch(msgType){
         case ConnexionClient.Msg.DeviceState:
-			
-//			print("Inside ConnexionClient.msg.DeviceState")
 
             let state = (UnsafeMutablePointer<ConnexionDeviceState>(msgArgPtr)).memory
 				
-            if state.client == clientID{
+            if state.client == clientID!{
                 
                 switch(state.command){
                 case ConnexionClient.Cmd.HandleAxis:
@@ -130,30 +135,14 @@ class ViewController: NSViewController {
         case ConnexionClient.Msg.PrefsChanged:
 			print("Inside ConnexionClient.Msg.PrefsChanged")
 			
-			var prefs = ConnexionDevicePrefs();
 			
-			ConnexionGetCurrentDevicePrefs(deviceID, &prefs)
-	
-			var deviceName = "Unknown"
-			
-			switch(prefs.deviceID){
-			case 32767:
-				deviceName = "SpaceNavigator"
-				break
-			default:
-				break
-			}
-			
-			let prefString : String = "\(deviceName) - deviceID: (\(prefs.deviceID))";
-			
-			ViewController.appInstance.mainVC.WtfCurrentPref.stringValue = prefString
-			
-			
+			ViewController.appInstance.mainVC.printDevicePrefs(deviceID)
 			
             break;
         case ConnexionClient.Msg.CalibrateDevice:
             print("Inside ConnexionClient.Msg.CalibrateDevice")
-            
+			
+            ViewController.appInstance.mainVC.printDevicePrefs(deviceID)
             
             break;
         default:
@@ -164,24 +153,57 @@ class ViewController: NSViewController {
     
     let myAddedHandler : ConnexionAddedHandlerProc = {(deviceID : UInt32) -> Void in
         print("Device added with ID \(deviceID)");
+		
+		ViewController.appInstance.mainVC.printDevicePrefs(deviceID)
     }
     
     let myRemovedHandler : ConnexionRemovedHandlerProc = {(deviceID : UInt32) -> Void in
         print("Device removed with ID \(deviceID)");
+		
+		ViewController.appInstance.mainVC.printDevicePrefs(deviceID)
     }
-    
-    
-    override func viewDidLoad() {
+	
+	public func printDevicePrefs(deviceID : UInt32) -> Void{
+		WtfCurrentPref.stringValue = ""
+		
+		var prefs : ConnexionDevicePrefs = ConnexionDevicePrefs();
+		
+		let result = ConnexionGetCurrentDevicePrefs(deviceID, &prefs)
+		
+		let prefString : String = "" +
+			"deviceID: \(deviceID)\n" +
+			"result: \(result)\n" +
+			"prefs.deviceID: \(prefs.deviceID)\n" +
+			"Type: \(prefs.type)\n" +
+			"Version: \(prefs.version)\n" +
+			"AppSignature: \(prefs.appSignature)\n" +
+			//			"AppName: \(prefs.appName)\n" +
+			"MainSpeed: \(prefs.mainSpeed)\n" +
+			"ZoomOnY: \(prefs.zoomOnY)\n" +
+			"Dominant: \(prefs.dominant)\n" +
+			"MapV: \(prefs.mapV)\n" +
+			"MapH: \(prefs.mapH)\n" +
+			"Axis enabled: \(prefs.enabled)\n" +
+			"Speed: \(prefs.speed)\n" +
+			"Sensivity: \(prefs.sensitivity)\n" +
+			"Scale: \(prefs.scale)\n" +
+			"Gama: \(prefs.gamma)\n" +
+			"Intersect: \(prefs.intersect)";
+		
+		WtfCurrentPref.stringValue = prefString
+	}
+	
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         ViewController.appInstance.mainVC = self
     }
     
-    override func viewDidAppear() {
+    override public func viewDidAppear() {
         start3DMouse()
     }
     
-    override func viewDidDisappear() {
+    override public func viewDidDisappear() {
         stop3DMouse()
         
         NSApplication.sharedApplication().terminate(self)

@@ -698,8 +698,8 @@
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-Ic-NHq">
                                             <rect key="frame" x="20" y="20" width="247" height="304"/>
                                             <animations/>
-                                            <textFieldCell key="cell" allowsUndo="NO" state="on" title="Current Preferences" placeholderString="Current Preferences" id="rFe-f9-yGN">
-                                                <font key="font" metaFont="system"/>
+                                            <textFieldCell key="cell" selectable="YES" allowsUndo="NO" state="on" title="Current Preferences" placeholderString="Current Preferences" id="rFe-f9-yGN">
+                                                <font key="font" metaFont="fixedUser" size="11"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -762,6 +762,7 @@
                                             <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Translate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="8z9-PX-MOC">
                                             <rect key="frame" x="17" y="226" width="92" height="44"/>
@@ -784,6 +785,7 @@
                                             <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Translate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="DCw-uz-btA">
                                             <rect key="frame" x="17" y="178" width="92" height="44"/>
@@ -806,6 +808,7 @@
                                             <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Rotate X" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-dQ-unq">
                                             <rect key="frame" x="17" y="112" width="92" height="44"/>
@@ -828,6 +831,7 @@
                                             <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Rotate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Epn-ER-Gxc">
                                             <rect key="frame" x="17" y="64" width="92" height="44"/>
@@ -850,6 +854,7 @@
                                             <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Rotate Z" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="tgH-Ne-VTf">
                                             <rect key="frame" x="17" y="16" width="92" height="44"/>
@@ -872,6 +877,7 @@
                                             <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WLD-mJ-2Lx">
                                             <rect key="frame" x="15" y="167" width="96" height="5"/>
