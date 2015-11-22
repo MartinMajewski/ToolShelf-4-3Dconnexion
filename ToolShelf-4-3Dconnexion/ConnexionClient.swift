@@ -1,10 +1,12 @@
 //
+//  
 //  ConnexionClient.swift
-//  3DconnexionStatsUtility
+//  ToolShelf-4-3Dconnexion
 //
 //  Created by Martin Majewski on 24.10.15.
 //  Copyright © 2015 MartinMajewski.net. All rights reserved.
 //
+
 import Foundation
 
 struct ConnexionClient{
@@ -106,20 +108,46 @@ struct ConnexionClient{
     }
     
     // Masks for client-controlled feature switches
+	/*
+		Driver uses a 32 bit-mask to (de-)activate axis and the dominant mode
+		
+		Only the first 16 bits from the lsb upwards are used so far
+		
+		Dominant: 0000 0010
+		
+		Translation Axis:
+			Axis 1 (Tx): 0000 0100
+			Axis 2 (Ty): 0000 1000
+			Axis 3 (Tz): 0001 0000
+	
+		Rotatio  Axis:
+			Axis 4 (Rx): 0010 0000
+			Axis 5 (Ry): 0100 0000
+			Axis 6 (Rz): 1000 0000
+	
+		EnableTrans, EnableRot and EnableAll are simply accumulated bit-masks of the above patterns
+	
+		EnableTrans:	 0001 1100
+		EnableRot:		 1110 0000
+		EnableAll:		 1111 1100
+	
+		The AllDisabled field is a little bit odd, because it is actually an 64bit integer value with the msb set to 1.
+		The msb inside a signed integer variable is the sign bit. The current value stands for the
+	*/
     struct Switch{
-        static let Dominant       : UInt32 = 0x0002
-        static let EnableAxis1    : UInt32 = 0x0004
-        static let EnableAxis2    : UInt32 = 0x0008
-        static let EnableAxis3    : UInt32 = 0x0010
-        static let EnableAxis4    : UInt32 = 0x0020
-        static let EnableAxis5    : UInt32 = 0x0040
-        static let EnableAxis6    : UInt32 = 0x0080
+        static let Dominant       : Int32 = 0x0002
+        static let EnableAxis1    : Int32 = 0x0004
+        static let EnableAxis2    : Int32 = 0x0008
+        static let EnableAxis3    : Int32 = 0x0010
+        static let EnableAxis4    : Int32 = 0x0020
+        static let EnableAxis5    : Int32 = 0x0040
+        static let EnableAxis6    : Int32 = 0x0080
         
-        static let EnableTrans    : UInt32 = 0x001C
-        static let EnableRot      : UInt32 = 0x00E0
-        static let EnableAll      : UInt32 = 0x00FC
+        static let EnableTrans    : Int32 = 0x001C
+        static let EnableRot      : Int32 = 0x00E0
+        static let EnableAll      : Int32 = 0x00FC
         
-        static let AllDisabled     : UInt64 = 0x80000000 // use driver defaults instead of client-controlled switches
+        static let AllDisabled     : Int64 = 0x80000000 // use driver defaults instead of client-controlled switches
     }
 	
 	//==============================================================================
@@ -135,48 +163,8 @@ struct ConnexionClient{
 	// Structure type and current version:
 	static let DevicePrefsType : UInt32 = 0x4D50 // 'MP' (Connexion Prefs)
 	static let DevicePrefsVers : UInt32 = 0x7031 // 'p1' (version 1)
-    
 	
+	//==============================================================================
 	
-    //==============================================================================
-    // C Utilities to interact with driver
-    
-    static let bitMaskOne : UInt32 = 0x0001
-    
-    // Convert a Swift String into a UInt32 C like four-characters encoding used e.g. inside the RegisterConnexionClient() function
-    static func GetOSTypeCodeFrom(string : String) -> UInt32 {
-        var result : UInt32 = 0
-        if let data = string.dataUsingEncoding(NSMacOSRomanStringEncoding) {
-            let bytes = UnsafePointer<UInt8>(data.bytes)
-            for i in 0..<data.length {
-                result = result << 8 + UInt32(bytes[i])
-            }
-        }
-        
-        //print("\(string) results in \(result)")
-        return result
-    }
-    
-    
-    static func IsButtonActive(withId id: UInt32, var inside buttons: UInt32) -> Bool{
-        buttons = buttons >> (id - 1)
-        return (buttons & bitMaskOne) == bitMaskOne
-    }
-    
-    
-    static func GetArrayOfButtons(var buttons : UInt32) -> [Bool]{
-        
-        var btnDictonary = [Bool](count: 32, repeatedValue: false)
-        
-        for bitIdx in 0...31{
-            if (buttons & bitMaskOne) == bitMaskOne{
-                btnDictonary[bitIdx] = true;
-            }
-            
-            buttons = buttons >> 1
-        }
-        
-        return btnDictonary
-    }
 }
 

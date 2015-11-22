@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C27e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C47a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
         <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -654,10 +654,10 @@
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="ToolShelf 4 3Dconnexion" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="ToolShelf 4 3Dconnexion" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="160" y="360" width="600" height="468"/>
+                        <rect key="contentRect" x="160" y="360" width="800" height="395"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="600" height="468"/>
-                        <value key="maxSize" type="size" width="600" height="468"/>
+                        <value key="minSize" type="size" width="800" height="395"/>
+                        <value key="maxSize" type="size" width="800" height="395"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -672,55 +672,55 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ToolShelf_4_3Dconnexion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="468"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="395"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="J0B-u4-lEa">
-                                <rect key="frame" x="286" y="84" width="5" height="384"/>
-                                <animations/>
+                                <rect key="frame" x="286" y="0.0" width="5" height="395"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
                             <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NJT-9t-H9M">
-                                <rect key="frame" x="148" y="84" width="5" height="384"/>
-                                <animations/>
+                                <rect key="frame" x="148" y="0.0" width="5" height="395"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
-                            <box fixedFrame="YES" title="Current Preferences" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="BeH-ca-hEO">
-                                <rect key="frame" x="294" y="89" width="289" height="354"/>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-8U-cLs">
+                                <rect key="frame" x="543" y="0.0" width="5" height="395"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box fixedFrame="YES" title="Connected Devices" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="BeH-ca-hEO">
+                                <rect key="frame" x="294" y="16" width="246" height="290"/>
                                 <view key="contentView" id="dXS-9a-7dS">
-                                    <rect key="frame" x="1" y="1" width="287" height="338"/>
+                                    <rect key="frame" x="1" y="1" width="244" height="274"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-Ic-NHq">
-                                            <rect key="frame" x="20" y="20" width="247" height="304"/>
-                                            <animations/>
-                                            <textFieldCell key="cell" selectable="YES" allowsUndo="NO" state="on" title="Current Preferences" placeholderString="Current Preferences" id="rFe-f9-yGN">
+                                            <rect key="frame" x="20" y="20" width="206" height="240"/>
+                                            <textFieldCell key="cell" selectable="YES" allowsUndo="NO" state="on" title="Connected Devices" placeholderString="Connected Devices" id="rFe-f9-yGN">
                                                 <font key="font" metaFont="fixedUser" size="11"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                     </subviews>
-                                    <animations/>
                                 </view>
-                                <animations/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box fixedFrame="YES" title="Buttons IDs Active" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="13i-Wd-mKH">
-                                <rect key="frame" x="156" y="89" width="127" height="354"/>
+                            <box fixedFrame="YES" title="Active Buttons" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="13i-Wd-mKH">
+                                <rect key="frame" x="156" y="16" width="127" height="354"/>
                                 <view key="contentView" id="qR1-Vj-PbE">
                                     <rect key="frame" x="1" y="1" width="125" height="338"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Xz-81I">
                                             <rect key="frame" x="18" y="20" width="90" height="298"/>
-                                            <animations/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="7TI-u1-mYU">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -728,15 +728,13 @@
                                             </textFieldCell>
                                         </textField>
                                     </subviews>
-                                    <animations/>
                                 </view>
-                                <animations/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
                             <box fixedFrame="YES" title="Axis Values" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="ymj-Id-xWR">
-                                <rect key="frame" x="17" y="89" width="128" height="354"/>
+                                <rect key="frame" x="17" y="16" width="128" height="354"/>
                                 <view key="contentView" id="2cl-dc-4ye">
                                     <rect key="frame" x="1" y="1" width="126" height="338"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -749,7 +747,6 @@
                                                 <subviews>
                                                     <textField identifier="lblRotateX" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQk-n0-f06">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="en6-AB-8cX">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -757,12 +754,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                                <animations/>
                                             </view>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Translate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="8z9-PX-MOC">
                                             <rect key="frame" x="17" y="226" width="92" height="44"/>
@@ -772,7 +766,6 @@
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-3e-mfJ">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="fOy-VT-XjS">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -780,12 +773,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                                <animations/>
                                             </view>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Translate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="DCw-uz-btA">
                                             <rect key="frame" x="17" y="178" width="92" height="44"/>
@@ -795,7 +785,6 @@
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXG-mz-47I">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="U4x-Kl-Z9s">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -803,12 +792,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                                <animations/>
                                             </view>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Rotate X" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-dQ-unq">
                                             <rect key="frame" x="17" y="112" width="92" height="44"/>
@@ -818,7 +804,6 @@
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tru-yY-xEz">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="XPG-66-epb">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -826,12 +811,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                                <animations/>
                                             </view>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Rotate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Epn-ER-Gxc">
                                             <rect key="frame" x="17" y="64" width="92" height="44"/>
@@ -841,7 +823,6 @@
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdU-mW-bCC">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="xuC-rK-cOY">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -849,12 +830,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                                <animations/>
                                             </view>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box fixedFrame="YES" title="Rotate Z" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="tgH-Ne-VTf">
                                             <rect key="frame" x="17" y="16" width="92" height="44"/>
@@ -864,7 +842,6 @@
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8Z-VR-be5">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
-                                                        <animations/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="bfJ-Ke-EzM">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -872,64 +849,142 @@
                                                         </textFieldCell>
                                                     </textField>
                                                 </subviews>
-                                                <animations/>
                                             </view>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="message" size="11"/>
                                         </box>
                                         <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WLD-mJ-2Lx">
                                             <rect key="frame" x="15" y="167" width="96" height="5"/>
-                                            <animations/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
                                         </box>
                                     </subviews>
-                                    <animations/>
                                 </view>
-                                <animations/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="lKD-tW-i7X">
-                                <rect key="frame" x="20" y="82" width="560" height="5"/>
-                                <animations/>
+                            <box fixedFrame="YES" title="Configure Device" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="iKx-MW-FYL">
+                                <rect key="frame" x="551" y="16" width="232" height="354"/>
+                                <view key="contentView" id="wTT-8N-OZB">
+                                    <rect key="frame" x="1" y="1" width="230" height="338"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button identifier="cbDominantMode" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-Ve-Kxz">
+                                            <rect key="frame" x="18" y="302" width="194" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Dominant Mode" bezelStyle="regularSquare" imagePosition="left" alignment="left" identifier="cbDominantMode" inset="2" id="tDA-EN-vql">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="cofigureAxis:" target="XfG-lQ-9wD" id="gjv-0J-YcR"/>
+                                            </connections>
+                                        </button>
+                                        <box fixedFrame="YES" title="Active Axis" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-bx-Dft">
+                                            <rect key="frame" x="17" y="149" width="196" height="139"/>
+                                            <view key="contentView" id="9Yy-Cg-Jzd">
+                                                <rect key="frame" x="1" y="1" width="194" height="123"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button identifier="rbAxisAll" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGD-Fp-2Qs">
+                                                        <rect key="frame" x="19" y="86" width="157" height="18"/>
+                                                        <buttonCell key="cell" type="radio" title="All Axis" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="pG3-4M-uBD">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="cofigureAxis:" target="XfG-lQ-9wD" id="89G-Zf-a9C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button identifier="rbAxisRotation" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mh6-5x-3zX">
+                                                        <rect key="frame" x="19" y="42" width="157" height="18"/>
+                                                        <buttonCell key="cell" type="radio" title="Rotation only" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="g4u-Lz-b37">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="cofigureAxis:" target="XfG-lQ-9wD" id="ii2-z4-cMe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button identifier="rbAxisTranslation" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-c3-ldD">
+                                                        <rect key="frame" x="19" y="64" width="157" height="18"/>
+                                                        <buttonCell key="cell" type="radio" title="Translation only" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2W7-Jl-XAu">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="cofigureAxis:" target="XfG-lQ-9wD" id="JT7-bi-qjf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button identifier="rbAxisDisabled" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnL-jt-yl3">
+                                                        <rect key="frame" x="19" y="19" width="157" height="18"/>
+                                                        <buttonCell key="cell" type="radio" title="Disable All Axis" bezelStyle="regularSquare" imagePosition="left" alignment="left" identifier="rbAxisDisabled" inset="2" id="B2N-v0-4oW">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="cofigureAxis:" target="XfG-lQ-9wD" id="7BL-jI-wfb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-2n-6Wb">
+                                            <rect key="frame" x="14" y="13" width="202" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Open Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0jC-zM-vpZ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="btnOpenPrefPane:" target="XfG-lQ-9wD" id="RXz-pT-THD"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
+                                <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box fixedFrame="YES" title="Connected Devices" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-3i-A8J">
-                                <rect key="frame" x="17" y="16" width="566" height="60"/>
+                            <box fixedFrame="YES" title="Active Device" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-3i-A8J">
+                                <rect key="frame" x="294" y="310" width="246" height="60"/>
                                 <view key="contentView" id="FXf-Oj-MNX">
-                                    <rect key="frame" x="1" y="1" width="564" height="44"/>
+                                    <rect key="frame" x="1" y="1" width="244" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <animations/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEv-dU-ICo">
+                                            <rect key="frame" x="18" y="9" width="208" height="26"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="None" id="aC8-rI-vwB">
+                                                <font key="font" metaFont="fixedUser" size="11"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
                                 </view>
-                                <animations/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
                         </subviews>
-                        <animations/>
                     </view>
                     <connections>
-                        <outlet property="WtfCurrentPref" destination="rFe-f9-yGN" id="4Ip-mP-85y"/>
                         <outlet property="lblActiveBtns" destination="8Md-Xz-81I" id="aTt-d3-XUb"/>
+                        <outlet property="lblActiveDevice" destination="aC8-rI-vwB" id="Qw5-Lw-mDr"/>
                         <outlet property="lblRotateX" destination="Tru-yY-xEz" id="els-AJ-XRj"/>
                         <outlet property="lblRotateY" destination="sdU-mW-bCC" id="SaM-3L-D5H"/>
                         <outlet property="lblRotateZ" destination="V8Z-VR-be5" id="Eec-i6-cFv"/>
                         <outlet property="lblTranslateX" destination="JQk-n0-f06" id="mCL-zA-lJy"/>
                         <outlet property="lblTranslateY" destination="gRJ-3e-mfJ" id="ELH-kY-hpn"/>
                         <outlet property="lblTranslateZ" destination="ZXG-mz-47I" id="GSw-s7-AM8"/>
+                        <outlet property="tfConnectedDevices" destination="rFe-f9-yGN" id="YX7-Wu-F5G"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="320"/>
+            <point key="canvasLocation" x="-282" y="847.5"/>
         </scene>
     </scenes>
 </document>
