@@ -1,6 +1,6 @@
 //
 //  3dconnexion-Bridging-Header.h
-//  3DconnexionStatsUtility
+//  ToolShelf-4-3Dconnexion
 //
 //  Created by Martin Majewski on 21.10.15.
 //  Copyright © 2015 MartinMajewski.net. All rights reserved.
