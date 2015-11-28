@@ -8,26 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		30337CC91BE7664C00220DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CC81BE7664C00220DC6 /* AppDelegate.swift */; };
-		30337CCB1BE7664C00220DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CCA1BE7664C00220DC6 /* ViewController.swift */; };
+		30337CCB1BE7664C00220DC6 /* VCMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CCA1BE7664C00220DC6 /* VCMainView.swift */; };
 		30337CCD1BE7664C00220DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30337CCC1BE7664C00220DC6 /* Assets.xcassets */; };
 		30337CD01BE7664C00220DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30337CCE1BE7664C00220DC6 /* Main.storyboard */; };
 		30337CDC1BE766B700220DC6 /* ConnexionAuxiliaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */; };
 		30337CDF1BE766B700220DC6 /* ConnexionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30337CDB1BE766B700220DC6 /* ConnexionClient.swift */; };
-		30337CE21BE766ED00220DC6 /* 3DconnexionClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */; };
+		30337CE21BE766ED00220DC6 /* 3DconnexionClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3095C82E1BF64516008F97F6 /* ConnexionClientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095C82D1BF64516008F97F6 /* ConnexionClientHelper.swift */; };
+		3095C8301BF659FA008F97F6 /* ConnexionClientErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095C82F1BF659FA008F97F6 /* ConnexionClientErrors.swift */; };
+		3099B5ED1C0471EC00B637B3 /* ConnexionMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099B5EC1C0471EC00B637B3 /* ConnexionMessageHandler.swift */; };
+		3099B5EF1C04728100B637B3 /* ConnexionAddedHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099B5EE1C04728100B637B3 /* ConnexionAddedHandler.swift */; };
+		3099B5F11C0472A300B637B3 /* ConnexionRemoveHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3099B5F01C0472A300B637B3 /* ConnexionRemoveHandler.swift */; };
+		30FFBABE1C050CD100E4A878 /* 3DConnexionDriverCheck.c in Sources */ = {isa = PBXBuildFile; fileRef = 30FFBABD1C050CD100E4A878 /* 3DConnexionDriverCheck.c */; };
+		30FFBAC41C05D3A600E4A878 /* VCDriverError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFBAC31C05D3A600E4A878 /* VCDriverError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30337CC51BE7664C00220DC6 /* ToolShelf-4-3Dconnexion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToolShelf-4-3Dconnexion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30337CC81BE7664C00220DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30337CCA1BE7664C00220DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30337CCA1BE7664C00220DC6 /* VCMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMainView.swift; sourceTree = "<group>"; };
 		30337CCC1BE7664C00220DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30337CCF1BE7664C00220DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30337CD11BE7664C00220DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionAuxiliaries.swift; sourceTree = "<group>"; };
-		30337CDA1BE766B700220DC6 /* 3dconnexion-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "3dconnexion-Bridging-Header.h"; sourceTree = "<group>"; };
+		30337CDA1BE766B700220DC6 /* 3Dconnexion-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "3Dconnexion-Bridging-Header.h"; sourceTree = "<group>"; };
 		30337CDB1BE766B700220DC6 /* ConnexionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionClient.swift; sourceTree = "<group>"; };
 		30337CE11BE766ED00220DC6 /* 3DconnexionClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = 3DconnexionClient.framework; path = ../../../../../../../Library/Frameworks/3DconnexionClient.framework; sourceTree = "<group>"; };
 		30337CE41BE7692700220DC6 /* ToolShelf-4-3Dconnexion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ToolShelf-4-3Dconnexion.entitlements"; sourceTree = "<group>"; };
+		3095C82D1BF64516008F97F6 /* ConnexionClientHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionClientHelper.swift; sourceTree = "<group>"; };
+		3095C82F1BF659FA008F97F6 /* ConnexionClientErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionClientErrors.swift; sourceTree = "<group>"; };
+		3099B5EC1C0471EC00B637B3 /* ConnexionMessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionMessageHandler.swift; sourceTree = "<group>"; };
+		3099B5EE1C04728100B637B3 /* ConnexionAddedHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionAddedHandler.swift; sourceTree = "<group>"; };
+		3099B5F01C0472A300B637B3 /* ConnexionRemoveHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnexionRemoveHandler.swift; sourceTree = "<group>"; };
+		30FFBABD1C050CD100E4A878 /* 3DConnexionDriverCheck.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 3DConnexionDriverCheck.c; sourceTree = "<group>"; };
+		30FFBAC31C05D3A600E4A878 /* VCDriverError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDriverError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +79,8 @@
 				303EB9831BE797B3009B6207 /* Ressources */,
 				30337CE01BE766C000220DC6 /* 3Dconnexion */,
 				30337CC81BE7664C00220DC6 /* AppDelegate.swift */,
-				30337CCA1BE7664C00220DC6 /* ViewController.swift */,
+				30337CCA1BE7664C00220DC6 /* VCMainView.swift */,
+				30FFBAC31C05D3A600E4A878 /* VCDriverError.swift */,
 				30337CCC1BE7664C00220DC6 /* Assets.xcassets */,
 			);
 			path = "ToolShelf-4-3Dconnexion";
@@ -74,9 +89,13 @@
 		30337CE01BE766C000220DC6 /* 3Dconnexion */ = {
 			isa = PBXGroup;
 			children = (
+				30FFBABD1C050CD100E4A878 /* 3DConnexionDriverCheck.c */,
 				30337CE31BE7670200220DC6 /* Bridging Header */,
 				30337CD71BE766B700220DC6 /* ConnexionAuxiliaries.swift */,
 				30337CDB1BE766B700220DC6 /* ConnexionClient.swift */,
+				3095C82D1BF64516008F97F6 /* ConnexionClientHelper.swift */,
+				3095C82F1BF659FA008F97F6 /* ConnexionClientErrors.swift */,
+				3099B5F21C0472B600B637B3 /* Callbacks */,
 			);
 			name = 3Dconnexion;
 			sourceTree = "<group>";
@@ -84,7 +103,7 @@
 		30337CE31BE7670200220DC6 /* Bridging Header */ = {
 			isa = PBXGroup;
 			children = (
-				30337CDA1BE766B700220DC6 /* 3dconnexion-Bridging-Header.h */,
+				30337CDA1BE766B700220DC6 /* 3Dconnexion-Bridging-Header.h */,
 			);
 			name = "Bridging Header";
 			sourceTree = "<group>";
@@ -97,6 +116,16 @@
 				30337CE41BE7692700220DC6 /* ToolShelf-4-3Dconnexion.entitlements */,
 			);
 			name = Ressources;
+			sourceTree = "<group>";
+		};
+		3099B5F21C0472B600B637B3 /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				3099B5EC1C0471EC00B637B3 /* ConnexionMessageHandler.swift */,
+				3099B5EE1C04728100B637B3 /* ConnexionAddedHandler.swift */,
+				3099B5F01C0472A300B637B3 /* ConnexionRemoveHandler.swift */,
+			);
+			name = Callbacks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +205,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				30337CDC1BE766B700220DC6 /* ConnexionAuxiliaries.swift in Sources */,
+				3099B5F11C0472A300B637B3 /* ConnexionRemoveHandler.swift in Sources */,
 				30337CDF1BE766B700220DC6 /* ConnexionClient.swift in Sources */,
-				30337CCB1BE7664C00220DC6 /* ViewController.swift in Sources */,
+				3095C82E1BF64516008F97F6 /* ConnexionClientHelper.swift in Sources */,
+				30337CCB1BE7664C00220DC6 /* VCMainView.swift in Sources */,
+				30FFBABE1C050CD100E4A878 /* 3DConnexionDriverCheck.c in Sources */,
+				30FFBAC41C05D3A600E4A878 /* VCDriverError.swift in Sources */,
+				3099B5EF1C04728100B637B3 /* ConnexionAddedHandler.swift in Sources */,
 				30337CC91BE7664C00220DC6 /* AppDelegate.swift in Sources */,
+				3099B5ED1C0471EC00B637B3 /* ConnexionMessageHandler.swift in Sources */,
+				3095C8301BF659FA008F97F6 /* ConnexionClientErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,14 +318,16 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "ToolShelf-4-3Dconnexion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.martinmajewski.ToolShelf-4-3Dconnexion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ToolShelf-4-3Dconnexion/3dconnexion-Bridging-Header.h";
@@ -302,14 +340,17 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "ToolShelf-4-3Dconnexion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.martinmajewski.ToolShelf-4-3Dconnexion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ToolShelf-4-3Dconnexion/3dconnexion-Bridging-Header.h";

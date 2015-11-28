@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="ToolShelf-4-3Dconnexion/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.2" build-num="7C62b"/>
+    </header>
+    <body>
+      <trans-unit id="0jC-zM-vpZ.title">
+        <source>Open Preferences</source>
+        <note>Class = "NSButtonCell"; title = "Open Preferences"; ObjectID = "0jC-zM-vpZ";</note>
+      </trans-unit>
+      <trans-unit id="1Wy-9N-ypQ.title">
+        <source>Box</source>
+        <note>Class = "NSBox"; title = "Box"; ObjectID = "1Wy-9N-ypQ";</note>
+      </trans-unit>
+      <trans-unit id="1Xt-HY-uBw.title">
+        <source>3DConnexionStatsUtility</source>
+        <note>Class = "NSMenuItem"; title = "3DConnexionStatsUtility"; ObjectID = "1Xt-HY-uBw";</note>
+      </trans-unit>
+      <trans-unit id="2W7-Jl-XAu.title">
+        <source>Translation only</source>
+        <note>Class = "NSButtonCell"; title = "Translation only"; ObjectID = "2W7-Jl-XAu";</note>
+      </trans-unit>
+      <trans-unit id="4sb-4s-VLi.title">
+        <source>Quit ToolShelf-4-3Dconnexion</source>
+        <note>Class = "NSMenuItem"; title = "Quit ToolShelf-4-3Dconnexion"; ObjectID = "4sb-4s-VLi";</note>
+      </trans-unit>
+      <trans-unit id="5QF-Oa-p0T.title">
+        <source>Edit</source>
+        <note>Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T";</note>
+      </trans-unit>
+      <trans-unit id="5kV-Vb-QxS.title">
+        <source>About ToolShelf-4-3Dconnexion</source>
+        <note>Class = "NSMenuItem"; title = "About ToolShelf-4-3Dconnexion"; ObjectID = "5kV-Vb-QxS";</note>
+      </trans-unit>
+      <trans-unit id="6eH-2A-Xig.title">
+        <source>Simply close this application</source>
+        <note>Class = "NSButtonCell"; title = "Simply close this application"; ObjectID = "6eH-2A-Xig";</note>
+      </trans-unit>
+      <trans-unit id="8eQ-hM-Wj5.title">
+        <source>Open martinmajewski.net and close this app</source>
+        <note>Class = "NSButtonCell"; title = "Open martinmajewski.net and close this app"; ObjectID = "8eQ-hM-Wj5";</note>
+      </trans-unit>
+      <trans-unit id="8z9-PX-MOC.title">
+        <source>Translate Y</source>
+        <note>Class = "NSBox"; title = "Translate Y"; ObjectID = "8z9-PX-MOC";</note>
+      </trans-unit>
+      <trans-unit id="13i-Wd-mKH.title">
+        <source>Active Buttons</source>
+        <note>Class = "NSBox"; title = "Active Buttons"; ObjectID = "13i-Wd-mKH";</note>
+      </trans-unit>
+      <trans-unit id="AYu-sK-qS6.title">
+        <source>Main Menu</source>
+        <note>Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6";</note>
+      </trans-unit>
+      <trans-unit id="Az7-dQ-unq.title">
+        <source>Rotate X</source>
+        <note>Class = "NSBox"; title = "Rotate X"; ObjectID = "Az7-dQ-unq";</note>
+      </trans-unit>
+      <trans-unit id="B2N-v0-4oW.title">
+        <source>Disable All Axis</source>
+        <note>Class = "NSButtonCell"; title = "Disable All Axis"; ObjectID = "B2N-v0-4oW";</note>
+      </trans-unit>
+      <trans-unit id="BOF-NM-1cW.title">
+        <source>Preferences…</source>
+        <note>Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW";</note>
+      </trans-unit>
+      <trans-unit id="BeH-ca-hEO.title">
+        <source>Connected Devices</source>
+        <note>Class = "NSBox"; title = "Connected Devices"; ObjectID = "BeH-ca-hEO";</note>
+      </trans-unit>
+      <trans-unit id="DCw-uz-btA.title">
+        <source>Translate Y</source>
+        <note>Class = "NSBox"; title = "Translate Y"; ObjectID = "DCw-uz-btA";</note>
+      </trans-unit>
+      <trans-unit id="Epn-ER-Gxc.title">
+        <source>Rotate Y</source>
+        <note>Class = "NSBox"; title = "Rotate Y"; ObjectID = "Epn-ER-Gxc";</note>
+      </trans-unit>
+      <trans-unit id="F2S-fz-NVQ.title">
+        <source>Help</source>
+        <note>Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ";</note>
+      </trans-unit>
+      <trans-unit id="FKE-Sm-Kum.title">
+        <source>Get Help (www.martinmajewski.net)</source>
+        <note>Class = "NSMenuItem"; title = "Get Help (www.martinmajewski.net)"; ObjectID = "FKE-Sm-Kum";</note>
+      </trans-unit>
+      <trans-unit id="IQv-IB-iLA.title">
+        <source>ToolShelf 4 3Dconnexion</source>
+        <note>Class = "NSWindow"; title = "ToolShelf 4 3Dconnexion"; ObjectID = "IQv-IB-iLA";</note>
+      </trans-unit>
+      <trans-unit id="IvF-gO-inS.title">
+        <source>Box</source>
+        <note>Class = "NSBox"; title = "Box"; ObjectID = "IvF-gO-inS";</note>
+      </trans-unit>
+      <trans-unit id="J0B-u4-lEa.title">
+        <source>Box</source>
+        <note>Class = "NSBox"; title = "Box"; ObjectID = "J0B-u4-lEa";</note>
+      </trans-unit>
+      <trans-unit id="Kd2-mp-pUS.title">
+        <source>Show All</source>
+        <note>Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS";</note>
+      </trans-unit>
+      <trans-unit id="LE2-aR-0XJ.title">
+        <source>Bring All to Front</source>
+        <note>Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ";</note>
+      </trans-unit>
+      <trans-unit id="NJT-9t-H9M.title">
+        <source>Box</source>
+        <note>Class = "NSBox"; title = "Box"; ObjectID = "NJT-9t-H9M";</note>
+      </trans-unit>
+      <trans-unit id="NKz-Eg-3fE.placeholderString">
+        <source>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</source>
+        <note>Class = "NSTextFieldCell"; placeholderString = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."; ObjectID = "NKz-Eg-3fE";</note>
+      </trans-unit>
+      <trans-unit id="NMo-om-nkz.title">
+        <source>Services</source>
+        <note>Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz";</note>
+      </trans-unit>
+      <trans-unit id="OY7-WF-poV.title">
+        <source>Minimize</source>
+        <note>Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV";</note>
+      </trans-unit>
+      <trans-unit id="Olw-nP-bQN.title">
+        <source>Hide ToolShelf-4-3Dconnexion</source>
+        <note>Class = "NSMenuItem"; title = "Hide ToolShelf-4-3Dconnexion"; ObjectID = "Olw-nP-bQN";</note>
+      </trans-unit>
+      <trans-unit id="Ph7-Qt-Gp1.title">
+        <source>No 3Dconnexion driver found on this machine!</source>
+        <note>Class = "NSTextFieldCell"; title = "No 3Dconnexion driver found on this machine!"; ObjectID = "Ph7-Qt-Gp1";</note>
+      </trans-unit>
+      <trans-unit id="QfU-IJ-oU6.title">
+        <source>Open 3Dconnexion website and close this app</source>
+        <note>Class = "NSButtonCell"; title = "Open 3Dconnexion website and close this app"; ObjectID = "QfU-IJ-oU6";</note>
+      </trans-unit>
+      <trans-unit id="Td7-aD-5lo.title">
+        <source>Window</source>
+        <note>Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo";</note>
+      </trans-unit>
+      <trans-unit id="U4x-Kl-Z9s.title">
+        <source>0</source>
+        <note>Class = "NSTextFieldCell"; title = "0"; ObjectID = "U4x-Kl-Z9s";</note>
+      </trans-unit>
+      <trans-unit id="Ueq-aT-rjv.title">
+        <source>None</source>
+        <note>Class = "NSTextFieldCell"; title = "None"; ObjectID = "Ueq-aT-rjv";</note>
+      </trans-unit>
+      <trans-unit id="V3c-3i-A8J.title">
+        <source>Active Device</source>
+        <note>Class = "NSBox"; title = "Active Device"; ObjectID = "V3c-3i-A8J";</note>
+      </trans-unit>
+      <trans-unit id="Vdr-fp-XzO.title">
+        <source>Hide Others</source>
+        <note>Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO";</note>
+      </trans-unit>
+      <trans-unit id="W48-6f-4Dl.title">
+        <source>Edit</source>
+        <note>Class = "NSMenu"; title = "Edit"; ObjectID = "W48-6f-4Dl";</note>
+      </trans-unit>
+      <trans-unit id="WLD-mJ-2Lx.title">
+        <source>Box</source>
+        <note>Class = "NSBox"; title = "Box"; ObjectID = "WLD-mJ-2Lx";</note>
+      </trans-unit>
+      <trans-unit id="XPG-66-epb.title">
+        <source>0</source>
+        <note>Class = "NSTextFieldCell"; title = "0"; ObjectID = "XPG-66-epb";</note>
+      </trans-unit>
+      <trans-unit id="aUF-d1-5bR.title">
+        <source>Window</source>
+        <note>Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR";</note>
+      </trans-unit>
+      <trans-unit id="bfJ-Ke-EzM.title">
+        <source>0</source>
+        <note>Class = "NSTextFieldCell"; title = "0"; ObjectID = "bfJ-Ke-EzM";</note>
+      </trans-unit>
+      <trans-unit id="bye-lY-PEG.title">
+        <source>Translate X</source>
+        <note>Class = "NSBox"; title = "Translate X"; ObjectID = "bye-lY-PEG";</note>
+      </trans-unit>
+      <trans-unit id="dJw-s4-tdV.title">
+        <source>DriverError</source>
+        <note>Class = "NSViewController"; title = "DriverError"; ObjectID = "dJw-s4-tdV";</note>
+      </trans-unit>
+      <trans-unit id="ePh-bx-Dft.title">
+        <source>Active Axis</source>
+        <note>Class = "NSBox"; title = "Active Axis"; ObjectID = "ePh-bx-Dft";</note>
+      </trans-unit>
+      <trans-unit id="en6-AB-8cX.title">
+        <source>0</source>
+        <note>Class = "NSTextFieldCell"; title = "0"; ObjectID = "en6-AB-8cX";</note>
+      </trans-unit>
+      <trans-unit id="fOy-VT-XjS.title">
+        <source>0</source>
+        <note>Class = "NSTextFieldCell"; title = "0"; ObjectID = "fOy-VT-XjS";</note>
+      </trans-unit>
+      <trans-unit id="g4u-Lz-b37.title">
+        <source>Rotation only</source>
+        <note>Class = "NSButtonCell"; title = "Rotation only"; ObjectID = "g4u-Lz-b37";</note>
+      </trans-unit>
+      <trans-unit id="hz9-B4-Xy5.title">
+        <source>Services</source>
+        <note>Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5";</note>
+      </trans-unit>
+      <trans-unit id="iKx-MW-FYL.title">
+        <source>Configure Device</source>
+        <note>Class = "NSBox"; title = "Configure Device"; ObjectID = "iKx-MW-FYL";</note>
+      </trans-unit>
+      <trans-unit id="pG3-4M-uBD.title">
+        <source>All Axis</source>
+        <note>Class = "NSButtonCell"; title = "All Axis"; ObjectID = "pG3-4M-uBD";</note>
+      </trans-unit>
+      <trans-unit id="rFe-f9-yGN.placeholderString">
+        <source>Connected Devices</source>
+        <note>Class = "NSTextFieldCell"; placeholderString = "Connected Devices"; ObjectID = "rFe-f9-yGN";</note>
+      </trans-unit>
+      <trans-unit id="rFe-f9-yGN.title">
+        <source>Connected Devices</source>
+        <note>Class = "NSTextFieldCell"; title = "Connected Devices"; ObjectID = "rFe-f9-yGN";</note>
+      </trans-unit>
+      <trans-unit id="tDA-EN-vql.title">
+        <source>Dominant Mode</source>
+        <note>Class = "NSButtonCell"; title = "Dominant Mode"; ObjectID = "tDA-EN-vql";</note>
+      </trans-unit>
+      <trans-unit id="tgH-Ne-VTf.title">
+        <source>Rotate Z</source>
+        <note>Class = "NSBox"; title = "Rotate Z"; ObjectID = "tgH-Ne-VTf";</note>
+      </trans-unit>
+      <trans-unit id="uQy-DD-JDr.title">
+        <source>3DConnexionStatsUtility</source>
+        <note>Class = "NSMenu"; title = "3DConnexionStatsUtility"; ObjectID = "uQy-DD-JDr";</note>
+      </trans-unit>
+      <trans-unit id="wWn-8U-cLs.title">
+        <source>Box</source>
+        <note>Class = "NSBox"; title = "Box"; ObjectID = "wWn-8U-cLs";</note>
+      </trans-unit>
+      <trans-unit id="wpr-3q-Mcd.title">
+        <source>Help</source>
+        <note>Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd";</note>
+      </trans-unit>
+      <trans-unit id="x3v-GG-iWU.title">
+        <source>Copy</source>
+        <note>Class = "NSMenuItem"; title = "Copy"; ObjectID = "x3v-GG-iWU";</note>
+      </trans-unit>
+      <trans-unit id="xuC-rK-cOY.title">
+        <source>0</source>
+        <note>Class = "NSTextFieldCell"; title = "0"; ObjectID = "xuC-rK-cOY";</note>
+      </trans-unit>
+      <trans-unit id="ymj-Id-xWR.title">
+        <source>Axis Values</source>
+        <note>Class = "NSBox"; title = "Axis Values"; ObjectID = "ymj-Id-xWR";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="ToolShelf-4-3Dconnexion/Info.plist" source-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.2" build-num="7C62b"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>0.9</source>
+      </trans-unit>
+      <trans-unit id="NSHumanReadableCopyright">
+        <source>Copyright © 2015 MartinMajewski.net. All rights reserved.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,6 +1,6 @@
 //
 //  ConnexionAuxiliaries.swift
-//  3DconnexionStatsUtility
+//  ToolShelf-4-3Dconnexion
 //
 //  Created by Martin Majewski on 01.11.15.
 //  Copyright © 2015 MartinMajewski.net. All rights reserved.
@@ -24,6 +24,18 @@ struct ConnexionAuxiliaries{
 			"Address:\t\(ds.address)\n" +
 		"Buttons:\t\(ds.buttons)"
 	}
+	
+	static func GetStringFrom(DevicePrefs dp: ConnexionDevicePrefs) -> String!{
+		return "--------------------------\n" +
+			"type:\t\(dp.type)\n" +
+			"version:\t\(dp.version)\n" +
+			"deviceID:\t\(dp.deviceID)\n" +
+			"appSignature:\t\(dp.appSignature)\n" +
+			"mainSpeed:\t\(dp.mainSpeed)\n" +
+			"zoomOnY:\t\(dp.zoomOnY)\n" +
+			"dominant:\t\(dp.dominant)\n" +
+			"gamma:\t\(dp.gamma)\n" +
+			"intersect:\t\(dp.intersect)\n"
+	}
 
 }
-
