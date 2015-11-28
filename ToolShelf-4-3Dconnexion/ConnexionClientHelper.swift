@@ -28,39 +28,45 @@ class ConnexionClientHelper {
 	static let DeviceDictonary : [UInt32: String] = [50726: "SpaceNavigator (w)", 50731: "SpaceMouse Pro (w)", 50768: "CADMouse (w)"]
 	
 	// ==============================================================================
-	// Start and stop driver connection
+	// Start driver connection
+	
 	private var clientId : UInt16 = 0
 	
 	func start(MsgHandlerClosure msgHandler : ConnexionMessageHandlerProc, AddedHandlerClosure addHandler : ConnexionAddedHandlerProc, RemovedHandlerClosure remHandler : ConnexionRemovedHandlerProc ) throws -> Void{
 		
-		// Avoid multiple startings
-		if clientId != 0 {
-			throw ConnexionClientError.ClientIdAlreadySet
-		}
+		// Check if 3Dconnexion driver is present or else throw exception
+		guard isConnexionDriverAvailable() == true else { throw ConnexionClientError.DriverNotFound }
+		
+		// Avoid multiple starts
+		guard clientId == 0 else { throw ConnexionClientError.ClientIdAlreadySet }
 		
 		let error = SetConnexionHandlers(msgHandler, addHandler, remHandler, false)
-		if error != 0{
-			throw ConnexionClientError.OSErr(osErrCode: error)
-		}
+		
+		guard error == 0 else { throw ConnexionClientError.OSErr(osErrCode: error) }
 		
 		if let appSignature = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleSignature") as? String{
 			clientId = RegisterConnexionClient(ConnexionClientHelper.Instance.GetUInt32ValueFrom(String: appSignature), nil, ConnexionClient.ClientMode.TakeOver, ConnexionClient.Mask.All)
 			
-			if clientId == 0{
-				throw ConnexionClientError.ClientIdInvalid(clientId: clientId)
-			}
+			guard clientId != 0 else { throw ConnexionClientError.ClientIdInvalid(clientId: clientId) }
 			
 			SetConnexionClientButtonMask(clientId, (UInt32)(ConnexionClient.Mask.AllButtons));
 			SetConnexionClientMask(clientId, ConnexionClient.Mask.All)
+			set(AxisMode: AxisMode.AllAxis, On: true)
+			
 			print("clientId: \(clientId)")
 			
 		}else{
 			throw ConnexionClientError.CFBundleSignatureNotValid
 		}
-		
 	}
 	
-	func stop() -> Void{
+	// ==============================================================================
+	// Start driver connection
+	
+	func stop() throws -> Void{
+		// Check if 3Dconnexion driver is present or else throw exception
+		guard isConnexionDriverAvailable() == true else { throw ConnexionClientError.DriverNotFound }
+		
 		print("Stopping 3D Mouse for client ID \(clientId) and cleaning up")
 		UnregisterConnexionClient(clientId)
 		CleanupConnexionHandlers()
@@ -76,6 +82,8 @@ class ConnexionClientHelper {
 	
 	// ==============================================================================
 	// Device Configuration
+	
+	var connectedDevicesDictonary = [UInt32: String]()
 	
 	// Helper members to monitor and configure device state
 	private var currentSwitchConfigState = ConnexionClient.Switch.EnableAll
@@ -181,7 +189,7 @@ class ConnexionClientHelper {
 		ConnexionClientControl(ClientId, ConnexionClient.Ctrl.OpenPrefPane, 0, nil)
 	}
 	
-
+	
 	func IsButtonActive(withId id: UInt32, var inside buttons: UInt32) -> Bool{
 		buttons = buttons >> (id - 1)
 		return (buttons & bitMaskOne) == bitMaskOne

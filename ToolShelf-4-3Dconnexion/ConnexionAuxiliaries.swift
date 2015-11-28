@@ -1,6 +1,6 @@
 //
 //  ConnexionAuxiliaries.swift
-//  3DconnexionStatsUtility
+//  ToolShelf-4-3Dconnexion
 //
 //  Created by Martin Majewski on 01.11.15.
 //  Copyright © 2015 MartinMajewski.net. All rights reserved.

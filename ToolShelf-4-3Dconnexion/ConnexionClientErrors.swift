@@ -10,5 +10,6 @@ enum ConnexionClientError : ErrorType{
 	case CFBundleSignatureNotValid
 	case ClientIdAlreadySet
 	case ClientIdInvalid(clientId : UInt16)
+	case DriverNotFound
 	case OSErr(osErrCode : Int16)
 }

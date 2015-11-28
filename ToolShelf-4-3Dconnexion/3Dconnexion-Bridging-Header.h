@@ -12,5 +12,6 @@
 #import "/Library/Frameworks/3DconnexionClient.framework/Headers/ConnexionClientAPI.h"
 #import "/Library/Frameworks/3DconnexionClient.framework/Headers/ConnexionClient.h"
 
+bool isConnexionDriverAvailable();
 
 #endif /* _dconnexion_Bridging_Header_h */
