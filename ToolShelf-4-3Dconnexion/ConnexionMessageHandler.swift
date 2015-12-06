@@ -19,9 +19,9 @@ let messageHandler : ConnexionMessageHandlerProc = { (deviceId: UInt32, msgType:
 		
 		if state.client == CCH.Instance.ClientId {
 			
-			var result = UnsafeMutablePointer<Int32>()
-			
 			AppInstance.mainVC.tfActiveDevice.stringValue = "\(CCH.Instance.connectedDevicesDictonary[deviceId]!)\nDevice Id: \(deviceId)\nAddress: 0x\(String(state.address, radix: 16)) - 0d\(state.address)\n"
+			
+			print("Report:\t\(state.report)\n")
 			
 			switch(state.command){
 			case ConnexionClient.Cmd.HandleAxis:
@@ -40,7 +40,7 @@ let messageHandler : ConnexionMessageHandlerProc = { (deviceId: UInt32, msgType:
 				var outputString : String = ""
 				
 				for idx in 1...32{
-					if(CCH.Instance.IsButtonActive(withId: UInt32(idx), inside: state.buttons)){
+					if(CCH.Instance.isButtonActive(withId: UInt32(idx), inside: state.buttons)){
 						outputString += "- \(idx) -\n"
 					}
 					
