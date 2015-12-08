@@ -1,5 +1,4 @@
 //
-//  
 //  ConnexionClient.swift
 //  ToolShelf-4-3Dconnexion
 //
@@ -102,7 +101,7 @@ struct ConnexionClient{
         static let Button31     : UInt64 = 0x40000000
         static let Button32     : UInt64 = 0x80000000
 		
-		// Have to cast this UInt64 value to UIn32... This is BAD!!!
+		// Have to cast this UInt64 value to UIn32... This is weird!!!
         
         static let AllButtons   : UInt64 = 0xFFFFFFFF
     }
