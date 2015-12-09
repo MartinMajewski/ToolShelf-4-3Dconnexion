@@ -25,7 +25,27 @@ class ConnexionClientHelper {
 		
 	}
 	
-	static let DeviceDictonary : [UInt32: String] = [50726: "SpaceNavigator (w)", 50731: "SpaceMouse Pro (w)", 50768: "CADMouse (w)"]
+	// =============================================================================
+	// Dictonary of device Ids and device names as found on
+	// http://www.3dconnexion.de/index.php?id=200&faq_red=faq/27
+	// Device Ids are integer equivalents of the hexcode PID values
+	static let DeviceDictonary : [UInt32: String] = [
+		50691: "SpaceMouse Plus (XT) USB",
+		50693: "CadMan",
+		50694: "SpaceMouse Classic USB",
+		50721: "SpaceBall 5000 USB",
+		50723: "SpaceTraveler",
+		50725: "SpacePilot",
+		50726: "SpaceNavigator",
+		50727: "SpaceExplorer",
+		50728: "SpaceNavigator for Notebooks",
+		50729: "SpacePilot Pro",
+		50731: "SpaceMouse Pro (wired)",
+		50734: "SpceMouse (cabled)",
+		50735: "SpceMouse (wireless)",
+		50737: "SpceMouse Pro (cabled)",
+		50738: "SpceMouse Pro (wireless)",
+		50768: "CADMouse (wired)"]
 	
 	// ==============================================================================
 	// Start driver connection
