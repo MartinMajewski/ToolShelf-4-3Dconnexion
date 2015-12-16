@@ -25,7 +25,27 @@ class ConnexionClientHelper {
 		
 	}
 	
-	static let DeviceDictonary : [UInt32: String] = [50726: "SpaceNavigator (w)", 50731: "SpaceMouse Pro (w)", 50768: "CADMouse (w)"]
+	// =============================================================================
+	// Dictonary of device Ids and device names as found on
+	// http://www.3dconnexion.de/index.php?id=200&faq_red=faq/27
+	// Device Ids are integer equivalents of the hexcode PID values
+	static let DeviceDictonary : [UInt32: String] = [
+		50691: "SpaceMouse Plus (XT) USB",
+		50693: "CadMan",
+		50694: "SpaceMouse Classic USB",
+		50721: "SpaceBall 5000 USB",
+		50723: "SpaceTraveler",
+		50725: "SpacePilot",
+		50726: "SpaceNavigator",
+		50727: "SpaceExplorer",
+		50728: "SpaceNavigator for Notebooks",
+		50729: "SpacePilot Pro",
+		50731: "SpaceMouse Pro (wired)",
+		50734: "SpceMouse (cabled)",
+		50735: "SpceMouse (wireless)",
+		50737: "SpceMouse Pro (cabled)",
+		50738: "SpceMouse Pro (wireless)",
+		50768: "CADMouse (wired)"]
 	
 	// ==============================================================================
 	// Start driver connection
@@ -39,6 +59,7 @@ class ConnexionClientHelper {
 		
 		// Avoid multiple starts
 		guard clientId == 0 else { throw ConnexionClientError.ClientIdAlreadySet }
+		
 		
 		let error = SetConnexionHandlers(msgHandler, addHandler, remHandler, false)
 		
@@ -145,7 +166,7 @@ class ConnexionClientHelper {
 	// ==============================================================================
 	// Helper functions - C Utilities to interact with driver
 	
-	let bitMaskOne : UInt32 = 0x0001
+	let BitMaskOne : UInt32 = 0x0001
 	
 	// Convert a Swift String into a UInt32 C like four-characters encoding used e.g. inside the RegisterConnexionClient() function
 	func GetUInt32ValueFrom(String string : String) -> UInt32 {
@@ -162,12 +183,12 @@ class ConnexionClientHelper {
 	}
 	
 	
-	func GetArrayOfButtons(var buttons : UInt32) -> [Bool]{
+	func getArrayOfButtons(var buttons : UInt32) -> [Bool]{
 		
 		var btnDictonary = [Bool](count: 32, repeatedValue: false)
 		
 		for bitIdx in 0...31{
-			if (buttons & bitMaskOne) == bitMaskOne{
+			if (buttons & BitMaskOne) == BitMaskOne{
 				btnDictonary[bitIdx] = true;
 			}
 			
@@ -190,9 +211,9 @@ class ConnexionClientHelper {
 	}
 	
 	
-	func IsButtonActive(withId id: UInt32, var inside buttons: UInt32) -> Bool{
+	func isButtonActive(withId id: UInt32, var inside buttons: UInt32) -> Bool{
 		buttons = buttons >> (id - 1)
-		return (buttons & bitMaskOne) == bitMaskOne
+		return (buttons & BitMaskOne) == BitMaskOne
 	}
 	
 }

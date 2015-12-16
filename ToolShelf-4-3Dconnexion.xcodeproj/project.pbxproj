@@ -308,6 +308,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -319,6 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -330,6 +332,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.martinmajewski.ToolShelf-4-3Dconnexion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7bbe34ee-64c3-4e2e-ac68-4d1232b25879";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ToolShelf-4-3Dconnexion/3dconnexion-Bridging-Header.h";
 			};
 			name = Debug;
@@ -341,6 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ToolShelf-4-3Dconnexion/ToolShelf-4-3Dconnexion.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -353,6 +357,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.martinmajewski.ToolShelf-4-3Dconnexion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7bbe34ee-64c3-4e2e-ac68-4d1232b25879";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ToolShelf-4-3Dconnexion/3dconnexion-Bridging-Header.h";
 			};
 			name = Release;

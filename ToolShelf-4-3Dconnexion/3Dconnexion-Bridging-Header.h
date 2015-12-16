@@ -6,12 +6,12 @@
 //  Copyright © 2015 MartinMajewski.net. All rights reserved.
 //
 
-#ifndef _dconnexion_Bridging_Header_h
-#define _dconnexion_Bridging_Header_h
+#ifndef _3dconnexion_Bridging_Header_h
+#define _3dconnexion_Bridging_Header_h
 
 #import "/Library/Frameworks/3DconnexionClient.framework/Headers/ConnexionClientAPI.h"
 #import "/Library/Frameworks/3DconnexionClient.framework/Headers/ConnexionClient.h"
 
 bool isConnexionDriverAvailable();
 
-#endif /* _dconnexion_Bridging_Header_h */
+#endif /* _3dconnexion_Bridging_Header_h */
