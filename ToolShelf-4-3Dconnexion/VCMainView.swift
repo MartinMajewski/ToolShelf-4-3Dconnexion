@@ -25,18 +25,18 @@ public class VCMainView: NSViewController {
 	private let connexionCH = CCH.Instance
 	
 	lazy var vcDriverNotInstalled: NSViewController = {
-		return self.storyboard!.instantiateControllerWithIdentifier("StrbrdIdDriverError") as! NSViewController
+        return self.storyboard!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "StrbrdIdDriverError")) as! NSViewController
 	}()
 	
 	func printConnectedDevicesFrom(Dictonary cdd : [UInt32: String], sorted: Bool = false) -> Void {
 		var output : String = ""
 		
 		func appendLineFrom(deviceId id: UInt32, DeviceName value: String) -> Void{
-			output.appendContentsOf("\(id) - \(value)\n")
+            output.append("\(id) - \(value)\n")
 		}
 		
 		if sorted{
-			let sortedConnectedDevices = cdd.sort({$0.0 < $1.0})
+            let sortedConnectedDevices = cdd.sorted(by: {$0.0 < $1.0})
 			
 			for (id, name) in sortedConnectedDevices {
 				appendLineFrom(deviceId: id, DeviceName: name)
@@ -51,13 +51,13 @@ public class VCMainView: NSViewController {
 	}
 	
 	
-	@IBAction func cofigureAxis(sender: NSButton) {
+	@IBAction func cofigureAxis(_ sender: NSButton) {
 		if let identifier = sender.identifier {
 			print("Identifier: \(identifier)")
 			
-			switch identifier{
+			switch identifier.rawValue {
 			case "cbDominantMode":
-				if(sender.state == NSOnState){
+				if(sender.state == NSControl.StateValue.on){
 					connexionCH.set(AxisMode: CCH.AxisMode.DominantMode, On: true)
 				}else{
 					connexionCH.set(AxisMode: CCH.AxisMode.DominantMode, On: false)
@@ -81,7 +81,7 @@ public class VCMainView: NSViewController {
 		}
 	}
 	
-	@IBAction func btnOpenPrefPane(sender: AnyObject) {
+	@IBAction func btnOpenPrefPane(_ sender: AnyObject) {
 		connexionCH.openPreferencesPane()
 	}
 	
