@@ -8,7 +8,7 @@
 
 import Cocoa
 
-let AppInstance = NSApplication.sharedApplication().delegate as! AppDelegate
+let AppInstance = NSApplication.shared.delegate as! AppDelegate
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -24,27 +24,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 	
     func ExitNow(sender: AnyObject) {
-        NSApplication.sharedApplication().terminate(self)
+        NSApplication.shared.terminate(self)
     }
 	
-	func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
 		return true
 	}
 	
 	func openWebsite(URL url: String) -> Bool {
 		if let checkURL = NSURL(string: url) {
-			if NSWorkspace.sharedWorkspace().openURL(checkURL) {
-				print("\(checkURL) successfully opened")
+            if NSWorkspace.shared.open(checkURL as URL) {
+                print("\(checkURL) successfully opened")
 				return true
 			}
 		}
-		
 		print("invalid url: \(url)")
 		return false
 	}
 
-	@IBAction func openMyWebsite(sender: AnyObject) {
-		openWebsite(URL: "http://www.martinmajewski.net")
+	@IBAction func openMyWebsite(_ sender: AnyObject) {
+        if(!openWebsite(URL: "http://www.martinmajewski.net")) {
+            print("failed to open")
+        }
 	}
 }
 
