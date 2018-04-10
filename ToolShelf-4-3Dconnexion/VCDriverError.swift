@@ -13,20 +13,24 @@ public class VCDriverError: NSViewController{
 	
 	@IBAction func btnCloseApp(sender: AnyObject) {
 		print("Closing Application now!")
-		self.dismissController(self)
-		AppInstance.ExitNow(self)
+        self.dismiss(self)
+        AppInstance.ExitNow(sender: self)
 	}
 	
 	@IBAction func btnOpenWebsiteAndCloseApp(sender: AnyObject) {
-		AppInstance.openWebsite(URL: "http://www.3dconnexion.de/service/drivers.html")
-		self.dismissController(self)
-		btnCloseApp(self)
+        if(!AppInstance.openWebsite(URL: "http://www.3dconnexion.de/service/drivers.html")) {
+            print("failed to open")
+        }
+        self.dismiss(self)
+        btnCloseApp(sender: self)
 	}
 	
 	@IBAction func btnOpenMMNetAndCloseApp(sender: AnyObject) {
-		AppInstance.openWebsite(URL: "http://www.martinmajewski.net")
-		self.dismissController(self)
-		btnCloseApp(self)
+        if(!AppInstance.openWebsite(URL: "http://www.martinmajewski.net")) {
+            print("failed to open")
+        }
+        self.dismiss(self)
+        btnCloseApp(sender: self)
 	}
 	
 }

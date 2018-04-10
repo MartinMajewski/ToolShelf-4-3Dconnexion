@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C47a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -120,6 +120,9 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="800" height="395"/>
                         <value key="maxSize" type="size" width="800" height="395"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="Ihb-mG-bNv"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -137,32 +140,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="395"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="J0B-u4-lEa">
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="J0B-u4-lEa">
                                 <rect key="frame" x="286" y="0.0" width="5" height="395"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="NJT-9t-H9M">
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="NJT-9t-H9M">
                                 <rect key="frame" x="148" y="0.0" width="5" height="395"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <box horizontalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-8U-cLs">
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-8U-cLs">
                                 <rect key="frame" x="543" y="0.0" width="5" height="395"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
-                            <box fixedFrame="YES" title="Connected Devices" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="BeH-ca-hEO">
+                            <box fixedFrame="YES" borderType="line" title="Connected Devices" translatesAutoresizingMaskIntoConstraints="NO" id="BeH-ca-hEO">
                                 <rect key="frame" x="294" y="16" width="246" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="dXS-9a-7dS">
                                     <rect key="frame" x="1" y="1" width="244" height="211"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-Ic-NHq">
                                             <rect key="frame" x="20" y="-43" width="206" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" selectable="YES" allowsUndo="NO" state="on" title="Connected Devices" placeholderString="Connected Devices" id="rFe-f9-yGN">
                                                 <font key="font" metaFont="fixedUser" size="11"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -171,18 +170,18 @@
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box fixedFrame="YES" title="Active Buttons" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="13i-Wd-mKH">
+                            <box fixedFrame="YES" borderType="line" title="Active Buttons" translatesAutoresizingMaskIntoConstraints="NO" id="13i-Wd-mKH">
                                 <rect key="frame" x="156" y="16" width="127" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="qR1-Vj-PbE">
                                     <rect key="frame" x="1" y="1" width="125" height="338"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-Xz-81I">
                                             <rect key="frame" x="18" y="20" width="90" height="298"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="7TI-u1-mYU">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -191,24 +190,25 @@
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box fixedFrame="YES" title="Axis Values" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="ymj-Id-xWR">
+                            <box fixedFrame="YES" borderType="line" title="Axis Values" translatesAutoresizingMaskIntoConstraints="NO" id="ymj-Id-xWR">
                                 <rect key="frame" x="17" y="16" width="128" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="2cl-dc-4ye">
                                     <rect key="frame" x="1" y="1" width="126" height="338"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box fixedFrame="YES" title="Translate X" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="bye-lY-PEG">
+                                        <box fixedFrame="YES" borderType="line" title="Translate X" translatesAutoresizingMaskIntoConstraints="NO" id="bye-lY-PEG">
                                             <rect key="frame" x="17" y="274" width="92" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="w9P-RL-K51">
                                                 <rect key="frame" x="1" y="1" width="90" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField identifier="lblRotateX" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQk-n0-f06">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="en6-AB-8cX">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -217,17 +217,17 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box fixedFrame="YES" title="Translate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="8z9-PX-MOC">
+                                        <box fixedFrame="YES" borderType="line" title="Translate Y" translatesAutoresizingMaskIntoConstraints="NO" id="8z9-PX-MOC">
                                             <rect key="frame" x="17" y="226" width="92" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="Sii-Ne-cRC">
                                                 <rect key="frame" x="1" y="1" width="90" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-3e-mfJ">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="fOy-VT-XjS">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -236,17 +236,17 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box fixedFrame="YES" title="Translate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="DCw-uz-btA">
+                                        <box fixedFrame="YES" borderType="line" title="Translate Z" translatesAutoresizingMaskIntoConstraints="NO" id="DCw-uz-btA" userLabel="Translate Z">
                                             <rect key="frame" x="17" y="178" width="92" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="wdE-DG-Kj7">
                                                 <rect key="frame" x="1" y="1" width="90" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXG-mz-47I">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="U4x-Kl-Z9s">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -255,17 +255,17 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box fixedFrame="YES" title="Rotate X" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-dQ-unq">
+                                        <box fixedFrame="YES" borderType="line" title="Rotate X" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-dQ-unq">
                                             <rect key="frame" x="17" y="112" width="92" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="zTZ-Ds-5Yf">
                                                 <rect key="frame" x="1" y="1" width="90" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tru-yY-xEz">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="XPG-66-epb">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -274,17 +274,17 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box fixedFrame="YES" title="Rotate Y" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Epn-ER-Gxc">
+                                        <box fixedFrame="YES" borderType="line" title="Rotate Y" translatesAutoresizingMaskIntoConstraints="NO" id="Epn-ER-Gxc">
                                             <rect key="frame" x="17" y="64" width="92" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="Ybc-hh-KE5">
                                                 <rect key="frame" x="1" y="1" width="90" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdU-mW-bCC">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="xuC-rK-cOY">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -293,17 +293,17 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box fixedFrame="YES" title="Rotate Z" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="tgH-Ne-VTf">
+                                        <box fixedFrame="YES" borderType="line" title="Rotate Z" translatesAutoresizingMaskIntoConstraints="NO" id="tgH-Ne-VTf">
                                             <rect key="frame" x="17" y="16" width="92" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="gmE-lp-tWF">
                                                 <rect key="frame" x="1" y="1" width="90" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8Z-VR-be5">
                                                         <rect key="frame" x="-2" y="6" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0" id="bfJ-Ke-EzM">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -312,29 +312,25 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WLD-mJ-2Lx">
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="WLD-mJ-2Lx">
                                             <rect key="frame" x="15" y="167" width="96" height="5"/>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="system"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </box>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box fixedFrame="YES" title="Configure Device" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="iKx-MW-FYL">
+                            <box fixedFrame="YES" borderType="line" title="Configure Device" translatesAutoresizingMaskIntoConstraints="NO" id="iKx-MW-FYL">
                                 <rect key="frame" x="551" y="16" width="232" height="354"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="wTT-8N-OZB">
                                     <rect key="frame" x="1" y="1" width="230" height="338"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button identifier="cbDominantMode" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-Ve-Kxz">
                                             <rect key="frame" x="18" y="302" width="194" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Dominant Mode" bezelStyle="regularSquare" imagePosition="left" alignment="left" identifier="cbDominantMode" inset="2" id="tDA-EN-vql">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -343,14 +339,16 @@
                                                 <action selector="cofigureAxis:" target="XfG-lQ-9wD" id="gjv-0J-YcR"/>
                                             </connections>
                                         </button>
-                                        <box fixedFrame="YES" title="Active Axis" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-bx-Dft">
+                                        <box fixedFrame="YES" borderType="line" title="Active Axis" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-bx-Dft">
                                             <rect key="frame" x="17" y="149" width="196" height="139"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="9Yy-Cg-Jzd">
                                                 <rect key="frame" x="1" y="1" width="194" height="123"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button identifier="rbAxisAll" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGD-Fp-2Qs">
                                                         <rect key="frame" x="19" y="86" width="157" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="radio" title="All Axis" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="pG3-4M-uBD">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -361,6 +359,7 @@
                                                     </button>
                                                     <button identifier="rbAxisRotation" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mh6-5x-3zX">
                                                         <rect key="frame" x="19" y="42" width="157" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="radio" title="Rotation only" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="g4u-Lz-b37">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -371,6 +370,7 @@
                                                     </button>
                                                     <button identifier="rbAxisTranslation" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXD-c3-ldD">
                                                         <rect key="frame" x="19" y="64" width="157" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="radio" title="Translation only" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2W7-Jl-XAu">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -381,6 +381,7 @@
                                                     </button>
                                                     <button identifier="rbAxisDisabled" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnL-jt-yl3">
                                                         <rect key="frame" x="19" y="19" width="157" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="radio" title="Disable All Axis" bezelStyle="regularSquare" imagePosition="left" alignment="left" identifier="rbAxisDisabled" inset="2" id="B2N-v0-4oW">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -391,11 +392,10 @@
                                                     </button>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-2n-6Wb">
                                             <rect key="frame" x="14" y="113" width="202" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="push" title="Open Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0jC-zM-vpZ">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -406,18 +406,18 @@
                                         </button>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
-                            <box fixedFrame="YES" title="Active Device" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-3i-A8J">
+                            <box fixedFrame="YES" borderType="line" title="Active Device" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-3i-A8J">
                                 <rect key="frame" x="294" y="247" width="246" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="FXf-Oj-MNX">
                                     <rect key="frame" x="1" y="1" width="244" height="107"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZL-zk-Bs8">
                                             <rect key="frame" x="18" y="20" width="208" height="67"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" controlSize="mini" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" title="None" id="Ueq-aT-rjv">
                                                 <font key="font" metaFont="fixedUser" size="11"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -426,8 +426,6 @@
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="smallSystemBold"/>
                             </box>
                         </subviews>
@@ -458,6 +456,7 @@
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SjS-Be-VnH">
                                 <rect key="frame" x="170" y="134" width="263" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="NKz-Eg-3fE">
                                     <font key="font" metaFont="system"/>
                                     <string key="title">Either the 3Dconnexion driver 
@@ -478,6 +477,7 @@ Please re-open it after driver installation.</string>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TqL-pL-tae">
                                 <rect key="frame" x="162" y="13" width="310" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close this application only" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6eH-2A-Xig">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -488,6 +488,7 @@ Please re-open it after driver installation.</string>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-9z-Afy">
                                 <rect key="frame" x="162" y="83" width="310" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Open 3Dconnexion website and close this app" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QfU-IJ-oU6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -498,6 +499,7 @@ Please re-open it after driver installation.</string>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kXd-q1-s74">
                                 <rect key="frame" x="162" y="46" width="310" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Open martinmajewski.net and close this app" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8eQ-hM-Wj5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -508,6 +510,7 @@ Please re-open it after driver installation.</string>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1n-3W-EYP">
                                 <rect key="frame" x="154" y="346" width="295" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3Dconnexion driver not found" id="koH-iC-f0v">
                                     <font key="font" metaFont="systemBold" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -516,6 +519,7 @@ Please re-open it after driver installation.</string>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snQ-VJ-XCl">
                                 <rect key="frame" x="20" y="240" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Attention" id="Yim-O2-HFR"/>
                             </imageView>
                         </subviews>

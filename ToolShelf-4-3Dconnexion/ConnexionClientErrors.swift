@@ -6,7 +6,8 @@
 //  Copyright © 2015 MartinMajewski.net. All rights reserved.
 //
 
-enum ConnexionClientError : ErrorType{
+enum ConnexionClientError : Swift.Error {
+    typealias RawValue = Swift.Error
 	case CFBundleSignatureNotValid
 	case ClientIdAlreadySet
 	case ClientIdInvalid(clientId : UInt16)

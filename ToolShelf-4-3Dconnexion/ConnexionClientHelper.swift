@@ -52,7 +52,7 @@ class ConnexionClientHelper {
 	
 	private var clientId : UInt16 = 0
 	
-	func start(MsgHandlerClosure msgHandler : ConnexionMessageHandlerProc, AddedHandlerClosure addHandler : ConnexionAddedHandlerProc, RemovedHandlerClosure remHandler : ConnexionRemovedHandlerProc ) throws -> Void{
+    func start(MsgHandlerClosure msgHandler : @escaping ConnexionMessageHandlerProc, AddedHandlerClosure addHandler : @escaping ConnexionAddedHandlerProc, RemovedHandlerClosure remHandler : @escaping ConnexionRemovedHandlerProc ) throws -> Void{
 		
 		// Check if 3Dconnexion driver is present or else throw exception
 		guard isConnexionDriverAvailable() == true else { throw ConnexionClientError.DriverNotFound }
@@ -65,7 +65,7 @@ class ConnexionClientHelper {
 		
 		guard error == 0 else { throw ConnexionClientError.OSErr(osErrCode: error) }
 		
-		if let appSignature = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleSignature") as? String{
+        if let appSignature = Bundle.main.object(forInfoDictionaryKey: "CFBundleSignature") as? String{
 			clientId = RegisterConnexionClient(ConnexionClientHelper.Instance.GetUInt32ValueFrom(String: appSignature), nil, ConnexionClient.ClientMode.TakeOver, ConnexionClient.Mask.All)
 			
 			guard clientId != 0 else { throw ConnexionClientError.ClientIdInvalid(clientId: clientId) }
@@ -171,10 +171,9 @@ class ConnexionClientHelper {
 	// Convert a Swift String into a UInt32 C like four-characters encoding used e.g. inside the RegisterConnexionClient() function
 	func GetUInt32ValueFrom(String string : String) -> UInt32 {
 		var result : UInt32 = 0
-		if let data = string.dataUsingEncoding(NSMacOSRomanStringEncoding) {
-			let bytes = UnsafePointer<UInt8>(data.bytes)
-			for i in 0..<data.length {
-				result = result << 8 + UInt32(bytes[i])
+        if let data = string.data(using: String.Encoding.macOSRoman) {
+            for i in 0..<data.count {
+				result = result << 8 + UInt32(data[i])
 			}
 		}
 		
@@ -183,9 +182,9 @@ class ConnexionClientHelper {
 	}
 	
 	
-	func getArrayOfButtons(var buttons : UInt32) -> [Bool]{
+    func getArrayOfButtons(buttons : inout UInt32) -> [Bool]{
 		
-		var btnDictonary = [Bool](count: 32, repeatedValue: false)
+        var btnDictonary = [Bool](repeating: false, count: 32)
 		
 		for bitIdx in 0...31{
 			if (buttons & BitMaskOne) == BitMaskOne{
@@ -211,7 +210,7 @@ class ConnexionClientHelper {
 	}
 	
 	
-	func isButtonActive(withId id: UInt32, var inside buttons: UInt32) -> Bool{
+    func isButtonActive(withId id: UInt32, inside buttons: inout UInt32) -> Bool{
 		buttons = buttons >> (id - 1)
 		return (buttons & BitMaskOne) == BitMaskOne
 	}
