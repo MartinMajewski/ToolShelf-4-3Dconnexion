@@ -1,4 +1,7 @@
 # ToolShelf-4-3Dconnexion
+
+**This repository is updated occasionally to mirror the latest changes regarding macOS and Swift. Therefore, there might be mismatches between this code and the How-To guide!**
+
 This is the accompanying repository for the How-To guide found on 
 
 http://www.martinmajewski.net/how2use3dconnexionwithswift/ 
