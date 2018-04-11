@@ -45,6 +45,7 @@ class ConnexionClientHelper {
 		50735: "SpceMouse (wireless)",
 		50737: "SpceMouse Pro (cabled)",
 		50738: "SpceMouse Pro (wireless)",
+		50741: "SpaceMouse Compact (wired)",
 		50768: "CADMouse (wired)"]
 	
 	// ==============================================================================
